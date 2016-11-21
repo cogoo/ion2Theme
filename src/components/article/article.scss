@@ -1,0 +1,25 @@
+article {
+    .article-background{
+        background-size: cover;
+        .article-title {
+            color: #fff;
+            text-align: left;
+            width: 50%;
+            h1 {
+                font-size: 5rem;
+                word-wrap: normal;
+            }
+        }
+    }
+    .tags {
+        > span {
+            display: inline-block;
+            background-color: color($colors, light);
+            padding: 5px;
+            text-transform: uppercase;
+            color: $text-color;
+            font-size: 1rem;
+        }
+    }
+}
+

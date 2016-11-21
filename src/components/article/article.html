@@ -1,0 +1,69 @@
+<!--
+  Generated template for the Article component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-content>
+  <ion-slides #mySlider (ionDidChange)="onSlideChanged($event.activeIndex)" [options]="sliderOptions">
+
+    <ion-slide padding class="article-background" style="background-image:url('assets/img/article/m6.jpg')">
+      <section class="article-title">
+        <h3>Mark Ranson</h3>
+        <h1>The beauty of Ionic 2</h1>
+        <div class="tags">
+          <span>Hybrid</span> <span>Mobile</span>
+        </div>
+      </section>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-content scroll="true">
+        <div>In the fall of 2015, before Stephen K. Bannon became a trusted adviser to the next president, he launched a daily
+          three-hour radio show that catered to what he <a title="www.breitbart.com" href="http://www.breitbart.com/big-journalism/2015/10/26/siriusxm-announces-daily-breitbart-news-radio/"
+            shape="rect">called</a> “those ‘low-information’ citizens who are mocked and ridiculed by their ‘betters’ — the
+          clueless elites.”</div>
+        <p>Bannon welcomed guests whose views, he often said, had been suppressed by the left’s political correctness.</p>
+        <p>He gave regular airtime to Milo Yiannopoulos, who was <a title="www.washingtonpost.com" href="https://www.washingtonpost.com/news/the-intersect/wp/2016/07/20/twitter-bans-milo-yiannopoulos-for-good-while-cracking-down-on-abuse/?tid=a_inl"
+            shape="rect">banned</a> from Twitter after cheering on supporters who barraged “Ghostbusters” actor Leslie Jones
+          with racist and sexist tweets. Bannon described an anti-Islamic activist who campaigns against what she calls “creeping
+          sharia” in the United States as “a voice in the wilderness.” A former Heritage Foundation staffer who had argued
+          that <a title="www.washingtonpost.com" href="https://www.washingtonpost.com/news/wonk/wp/2013/05/08/heritage-study-co-author-opposed-letting-in-immigrants-with-low-iqs/"
+            shape="rect">Hispanic immigrants have lower IQs</a> was “one of the smartest brains out there in demographics,
+          demography, this whole issue of immigration,” Bannon said.</p>
+
+        <p>One thing he had no doubts about, however, was the strength of the nationalist sentiments bolstering the candidate.</p>
+        <p>The day after Trump’s Election Day upset, Bannon took a victory lap on his old radio show, <a title="soundcloud.com"
+            href="https://soundcloud.com/breitbart/breitbart-news-daily-charlie-spiering-november-9-2016" shape="rect">chiding</a>          the media elite for failing to anticipate the outcome.</p>
+        <p>“They didn’t understand the underlying desire for people to have control over their own lives,” he said.</p>
+        <p>“This victory,” Bannon told his listeners, “is your victory.”</p>
+        <p>Alice Crites, David Weigel, Richard Chumney in Blacksburg, Va., and Evan Wyloge in Florence, Ariz., contributed to
+          this report.
+        </p>
+      </ion-content>
+    </ion-slide>
+
+    <ion-slide>
+      <h3>Add to Fav</h3>
+      <p>Detail</p>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>{{slideCount}} of 3</ion-title>
+    <ion-buttons start>
+      <button ion-button color="dark" (click)="close()">
+        CLOSE
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button color="dark">
+        <ion-icon name="paper"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
