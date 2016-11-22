@@ -25,6 +25,10 @@ export class AddArticleComponent {
     });
   }
 
+  saveForm() {
+
+  }
+
   closeModal() {
     this.viewCtrl.dismiss();
   }
