@@ -57,11 +57,12 @@ ion-content.content {
 .tags {
         > span {
             display: inline-block;
-            background-color: color($colors, light);
+            background-color: color($colors, grey);
             padding: 5px;
             text-transform: uppercase;
             color: $text-color;
             font-size: 1rem;
+            border-radius: 5px;
             & + span {
                 margin-left: 5px;
             }
