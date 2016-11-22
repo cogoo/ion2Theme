@@ -1,0 +1,26 @@
+<!--
+  Generated template for the Feed page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+</ion-header>
+
+
+<ion-content >
+<ion-slides #mySlider [ngClass]="setClass()" [options]="sliderOptions">
+
+    <ion-slide *ngFor="let article of articles" (click)="openArticle(article)" padding class="article-background" [style.background-image]="'url(assets/img/article/'+article.img+')'" >
+      <section class="article-title">
+        <h3>{{article.author}}</h3>
+        <h1>{{article.title}}</h1>
+        <div class="tags">
+          <span *ngFor="let tag of article.tags">{{tag}}</span>
+        </div>
+      </section>
+    </ion-slide>
+
+</ion-slides>
+</ion-content>
