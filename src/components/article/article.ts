@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ViewController, Slides } from 'ionic-angular';
+import { ViewController, Slides, NavParams } from 'ionic-angular';
 
 /*
   Generated class for the Article component.
@@ -16,9 +16,14 @@ export class ArticleComponent {
     @ViewChild('mySlider') slider: Slides;
     sliderOptions: any;
     slideCount: number;
+    numLikes: number;
+    article: any;
 
-    constructor(public viewCtrl: ViewController) {
+
+    constructor(public viewCtrl: ViewController, public params: NavParams) {
+        this.article = params.get('article');
         this.slideCount = 1;
+        this.numLikes = 14;
         this.sliderOptions = {
             pager: false,
             autoplay: 0,
@@ -27,10 +32,20 @@ export class ArticleComponent {
             speed: 300,
             direction: 'horizontal'
         }
+        setTimeout(() => {
+            this.slider.slideTo(1, 300);
+        }, 750)
     }
 
     close() {
-        this.viewCtrl.dismiss();
+        this.slider.slideTo(0, 300);
+        setTimeout(() => {
+            this.viewCtrl.dismiss();
+        }, 750)
+    }
+
+    addLikes() {
+        this.numLikes += 1;
     }
 
     onSlideChanged(index) {
