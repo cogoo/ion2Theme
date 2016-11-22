@@ -1,0 +1,48 @@
+page-category {
+    .blog {
+        &.item-block {
+            background-color: transparent;
+            border-bottom: 0.55px solid #c8c7cc;
+            .item-inner {
+                border: none;
+            }
+        }
+        h2 {
+            font-size: 16px;
+        }
+    }
+    .blog-details {
+        color: #93a0b3;
+        font-size: 14px;
+    }
+    .item-divider {
+        ion-label {
+            color: #93a0b3;
+            margin-bottom: 0px;
+        }
+    }
+    .people-group {
+        section {
+            background-color: #fff;
+             ion-avatar img {
+                 margin: 0 auto;
+             }
+            ion-item {
+                background-color: #fff;
+                p {
+                    text-align: center;
+                    color: #93a0b3;
+                    padding-top: 10px;
+                }
+            }
+            ion-label {
+                margin-bottom: 0px;
+            }
+            button {
+                box-shadow: none;
+                border-top: 1px solid #e8e8e8;
+                border-bottom: 1px solid #e8e8e8;
+            }
+        }
+    }
+}
