@@ -1,8 +1,9 @@
+import { AddArticleComponent } from './../../components/add-article/add-article';
+import { ModalController } from 'ionic-angular';
+import { ProfilePage } from './../profile/profile';
+import { CategoryPage } from './../category/category';
+import { FeedPage } from './../feed/feed';
 import { Component } from '@angular/core';
-
-import { HomePage } from '../home/home';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -10,11 +11,16 @@ import { ContactPage } from '../contact/contact';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  tab1Root: any = HomePage;
-  tab2Root: any = AboutPage;
-  tab3Root: any = ContactPage;
+  feedRoot: any = FeedPage;
+  categoryRoot: any = CategoryPage;
+  profileRoot: any = ProfilePage;
 
-  constructor() {
+  constructor(public modalCtrl: ModalController) {
 
+  }
+
+  addArticle() {
+    let modal = this.modalCtrl.create(AddArticleComponent);
+    modal.present();
   }
 }
