@@ -11,10 +11,6 @@ page-category {
             font-size: 16px;
         }
     }
-    .blog-details {
-        color: #93a0b3;
-        font-size: 14px;
-    }
     .item-divider {
         ion-label {
             color: #93a0b3;
@@ -24,6 +20,7 @@ page-category {
     .people-group {
         section {
             background-color: #fff;
+            box-shadow: 0px 0px 3px rgba(0,0,0,0.15);
              ion-avatar img {
                  margin: 0 auto;
              }

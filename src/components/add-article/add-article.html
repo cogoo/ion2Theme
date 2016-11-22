@@ -50,6 +50,6 @@
 
 <ion-footer>
   <ion-toolbar>
-    <button ion-button type="submit" color="secondary" [disabled]="!article.valid" full>Publish</button>
+    <button ion-button full type="submit" color="secondary" [disabled]="!article.valid" (click)="saveForm()">Publish</button>
   </ion-toolbar>
 </ion-footer>

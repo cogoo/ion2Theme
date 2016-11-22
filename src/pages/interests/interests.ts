@@ -13,10 +13,7 @@ import { NavController } from 'ionic-angular';
 })
 export class InterestsPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) { }
 
-  ionViewDidLoad() {
-    console.log('Hello InterestsPage Page');
-  }
 
 }

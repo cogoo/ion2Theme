@@ -26,7 +26,7 @@ export class AddArticleComponent {
   }
 
   saveForm() {
-
+    console.log(this.article.value)
   }
 
   closeModal() {
