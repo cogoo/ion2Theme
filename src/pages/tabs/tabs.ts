@@ -1,3 +1,4 @@
+import { InterestsPage } from './../interests/interests';
 import { AddArticleComponent } from './../../components/add-article/add-article';
 import { ModalController } from 'ionic-angular';
 import { ProfilePage } from './../profile/profile';
@@ -14,6 +15,7 @@ export class TabsPage {
   feedRoot: any = FeedPage;
   categoryRoot: any = CategoryPage;
   profileRoot: any = ProfilePage;
+  interestsRoot: any = InterestsPage;
 
   constructor(public modalCtrl: ModalController) {
 

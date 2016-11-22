@@ -1,3 +1,4 @@
+import { InterestsPage } from './../pages/interests/interests';
 import { AddArticleComponent } from './../components/add-article/add-article';
 import { ProfilePage } from './../pages/profile/profile';
 import { CategoryPage } from './../pages/category/category';
@@ -15,6 +16,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         ProfilePage,
         TabsPage,
         FeedPage,
+        InterestsPage,
         ArticleComponent,
         AddArticleComponent
     ],
@@ -28,6 +30,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         ProfilePage,
         TabsPage,
         FeedPage,
+        InterestsPage,
         ArticleComponent,
         AddArticleComponent
     ],
