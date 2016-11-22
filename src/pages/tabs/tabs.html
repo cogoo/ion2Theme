@@ -1,9 +1,10 @@
 <ion-tabs color="light">
-  <ion-tab [root]="tab1Root" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabIcon="compass"></ion-tab>
-  <ion-tab [root]="tab2Root" tabIcon="mail"></ion-tab>
-  <ion-tab [root]="tab3Root" tabIcon="contact"></ion-tab>
-   <ion-fab center bottom>
+  <ion-tab [root]="feedRoot" tabIcon="albums"></ion-tab>
+  <ion-tab [root]="categoryRoot" tabIcon="compass"></ion-tab>
+  <ion-tab></ion-tab>
+  <ion-tab [root]="profileRoot" tabIcon="apps"></ion-tab>
+  <ion-tab [root]="profileRoot" tabIcon="contact"></ion-tab>
+  <ion-fab class="special-fab -bottom" center bottom (click)="addArticle()">
     <button ion-fab mini color="dark"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 </ion-tabs>
