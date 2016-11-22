@@ -1,0 +1,55 @@
+<!--
+  Generated template for the AddArticle component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button (click)="closeModal()" outline>
+            <ion-icon name="close"></ion-icon>
+        </button>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="article" (ngSubmit)="saveForm()">
+    <ion-item-group>
+      <ion-item-divider color="grey">Basic Info</ion-item-divider>
+      <ion-item>
+        <ion-label>Category</ion-label>
+        <ion-select formControlName="articleType">
+          <ion-option value="travel" selected="true">Travel</ion-option>
+          <ion-option value="sports">Sports</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Title</ion-label>
+        <ion-input type="text" formControlName="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Author</ion-label>
+        <ion-input formControlName="author"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Content</ion-label>
+        <ion-textarea formControlName="contentBody"></ion-textarea>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="grey">Other</ion-item-divider>
+      <ion-item>
+        <ion-label>Featured</ion-label>
+        <ion-toggle formControlName="recurring"></ion-toggle>
+      </ion-item>
+    </ion-item-group>
+
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button full type="submit" color="secondary" [disabled]="!article.valid" (click)="saveForm()">Publish</button>
+  </ion-toolbar>
+</ion-footer>

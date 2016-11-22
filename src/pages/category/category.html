@@ -1,0 +1,67 @@
+<!--
+Generated template for the Category page.
+
+See http://ionicframework.com/docs/v2/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-select [(ngModel)]="category" color="grey">
+      <ion-option value="travel" selected="true">Travel</ion-option>
+      <ion-option value="sports">Sports</ion-option>
+    </ion-select>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item-group class="people-group">
+    <ion-item-divider color="grey" no-lines>People</ion-item-divider>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <section>
+            <ion-item no-lines>
+              <ion-avatar>
+                <img src="assets/img/profiles/avatar-ts-buzz.png">
+              </ion-avatar>
+              <p>buzz light year</p>
+              <p>43,219 followers</p>
+            </ion-item>
+            <button type="button" color="light" ion-button full>Follow</button>
+          </section>
+        </ion-col>
+        <ion-col>
+          <section>
+            <ion-item no-lines>
+              <ion-avatar>
+                <img src="assets/img/profiles/avatar-ts-buzz.png">
+              </ion-avatar>
+              <p>buzz light year</p>
+              <p>43,219 followers</p>
+            </ion-item>
+            <button type="button" color="light" ion-button full>Follow</button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider color="grey" no-lines>Articles</ion-item-divider>
+    <button ion-item class="blog" (click)="openArticle()" *ngFor="let article of [1,2,3,4,5]">
+  <ion-thumbnail item-left>
+    <img src="assets/img/thumbnail-rotla.png">
+  </ion-thumbnail>
+  <h2>Lets all React</h2>
+  <h2>Why we should all use React JS</h2>
+  <ion-grid>
+    <ion-row wrap class="blog-details">
+      <ion-col>John Doe</ion-col>
+      <ion-col>3mins ago</ion-col>
+    </ion-row>
+  </ion-grid>
+</button>
+  </ion-item-group>
+</ion-content>

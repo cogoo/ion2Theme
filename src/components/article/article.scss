@@ -11,14 +11,21 @@ article {
             }
         }
     }
-    .tags {
-        > span {
-            display: inline-block;
-            background-color: color($colors, light);
-            padding: 5px;
-            text-transform: uppercase;
-            color: $text-color;
-            font-size: 1rem;
+    .has-content {
+        > div {
+            height: 100%;
+            section {
+                padding-top: 30px;
+                height: 100%;
+                overflow-y:scroll;
+                text-align: left;
+                .first {
+                    float: left;
+                    font-size: 80px;
+                    line-height: 1;
+                    padding-right: 10px;
+                }
+            }
         }
     }
 }

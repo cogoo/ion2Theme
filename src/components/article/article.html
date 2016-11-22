@@ -6,24 +6,24 @@
 -->
 
 <ion-content>
-  <ion-slides #mySlider (ionDidChange)="onSlideChanged($event.activeIndex)" [options]="sliderOptions">
+  <ion-slides #mySlider [options]="sliderOptions">
 
-    <ion-slide padding class="article-background" style="background-image:url('assets/img/article/m6.jpg')">
+    <ion-slide padding class="article-background" [style.background-image]="'url(assets/img/article/'+article.img+')'">
       <section class="article-title">
-        <h3>Mark Ranson</h3>
-        <h1>The beauty of Ionic 2</h1>
+        <h3>{{article.author}}</h3>
+        <h1>{{article.title}}</h1>
         <div class="tags">
-          <span>Hybrid</span> <span>Mobile</span>
+          <span *ngFor="let tag of article.tags">{{tag}}</span>
         </div>
       </section>
     </ion-slide>
 
-    <ion-slide>
-      <ion-content scroll="true">
-        <div>In the fall of 2015, before Stephen K. Bannon became a trusted adviser to the next president, he launched a daily
+    <ion-slide class="has-content">
+      <section padding>
+        <p> <span class="first">I</span>n the fall of 2015, before Stephen K. Bannon became a trusted adviser to the next president, he launched a daily
           three-hour radio show that catered to what he <a title="www.breitbart.com" href="http://www.breitbart.com/big-journalism/2015/10/26/siriusxm-announces-daily-breitbart-news-radio/"
             shape="rect">called</a> “those ‘low-information’ citizens who are mocked and ridiculed by their ‘betters’ — the
-          clueless elites.”</div>
+          clueless elites.”</p>
         <p>Bannon welcomed guests whose views, he often said, had been suppressed by the left’s political correctness.</p>
         <p>He gave regular airtime to Milo Yiannopoulos, who was <a title="www.washingtonpost.com" href="https://www.washingtonpost.com/news/the-intersect/wp/2016/07/20/twitter-bans-milo-yiannopoulos-for-good-while-cracking-down-on-abuse/?tid=a_inl"
             shape="rect">banned</a> from Twitter after cheering on supporters who barraged “Ghostbusters” actor Leslie Jones
@@ -41,7 +41,7 @@
         <p>Alice Crites, David Weigel, Richard Chumney in Blacksburg, Va., and Evan Wyloge in Florence, Ariz., contributed to
           this report.
         </p>
-      </ion-content>
+      </section>
     </ion-slide>
 
     <ion-slide>
@@ -52,17 +52,17 @@
   </ion-slides>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>{{slideCount}} of 3</ion-title>
+<ion-footer >
+  <ion-toolbar color="dark">
     <ion-buttons start>
-      <button ion-button color="dark" (click)="close()">
+      <button ion-button (click)="close()">
         CLOSE
       </button>
     </ion-buttons>
     <ion-buttons end>
-      <button ion-button color="dark">
-        <ion-icon name="paper"></ion-icon>
+      <button ion-button (click)="addLikes()">
+        <ion-icon name="thumbs-up"></ion-icon>
+        &nbsp; {{numLikes}} likes
       </button>
     </ion-buttons>
   </ion-toolbar>

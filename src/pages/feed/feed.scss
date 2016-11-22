@@ -1,0 +1,20 @@
+page-feed {
+     .slides {
+        transition: all 1s;
+        &.article-open {
+            opacity: 0;
+        }
+    }
+    .article-background{
+        background-size: cover;
+        .article-title {
+            color: #fff;
+            text-align: left;
+            width: 50%;
+            h1 {
+                font-size: 5rem;
+                word-wrap: normal;
+            }
+        }
+    }
+}
