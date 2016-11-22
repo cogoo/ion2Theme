@@ -1,0 +1,11 @@
+page-interests {
+    ion-card{
+        &.card {
+        background-color: #fff;
+    }
+    .card-header {
+        color: $alt-text-color;
+        font-size: 1.2rem;
+    }
+    }
+}
